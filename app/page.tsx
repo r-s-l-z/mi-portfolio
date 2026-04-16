@@ -16,7 +16,7 @@ export default function Home() {
         </div>
 
         {/* HERO SECTION  */}
-        <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-20 relative z-10 min-h-[70vh]">
+        <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-40 relative z-10 min-h-[70vh]">
           <div className="flex-1 text-center md:text-left space-y-4">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tighter leading-tight">
               Haciendo realidad ideas, <br />

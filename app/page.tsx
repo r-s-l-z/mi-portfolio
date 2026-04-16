@@ -140,28 +140,31 @@ export default function Home() {
         </section>
 
         {/* SECCIÓN: HABILIDADES */}
-        <section id="habilidades" className="max-w-7xl w-full py-24 relative z-10 text-center">
+<section id="habilidades" className="max-w-7xl w-full py-24 relative z-10 text-center">
           <h2 className="text-3xl font-bold mb-4">Habilidades Técnicas</h2>
           <p className="text-gray-400 mb-12 italic">Herramientas que utilizo para dar vida a cada idea</p>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-500 max-w-4xl mx-auto px-4">
-            {/* Iconos Tecnologías */}
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-y-10 gap-x-6 opacity-80 grayscale hover:grayscale-0 transition-all duration-500 max-w-5xl mx-auto px-4">
             {[
               { name: 'HTML5', src: 'html5/html5-original.svg' },
               { name: 'CSS3', src: 'css3/css3-original.svg' },
               { name: 'JS', src: 'javascript/javascript-original.svg' },
+              { name: 'PHP', src: 'php/php-original.svg' },
+              { name: 'Python', src: 'python/python-original.svg' },
               { name: 'Tailwind', src: 'tailwindcss/tailwindcss-original.svg' },
               { name: 'React', src: 'react/react-original.svg' },
               { name: 'Node.js', src: 'nodejs/nodejs-original.svg' },
               { name: 'WordPress', src: 'wordpress/wordpress-plain.svg', invert: true },
-              { name: 'Figma', src: 'figma/figma-original.svg' }
+              { name: 'Figma', src: 'figma/figma-original.svg' },
+              { name: 'MongoDB', src: 'mongodb/mongodb-original.svg' },
+              { name: 'MySQL', src: 'mysql/mysql-original.svg' }
             ].map((skill) => (
-              <div key={skill.name} className="flex flex-col items-center gap-2">
+              <div key={skill.name} className="flex flex-col items-center gap-3">
                 <Image 
                   src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${skill.src}`} 
-                  width={40} height={40} alt={skill.name} 
+                  width={45} height={45} alt={skill.name} 
                   className={skill.invert ? 'invert' : ''}
                 />
-                <span className="text-[10px] font-mono">{skill.name}</span>
+                <span className="text-[10px] font-mono uppercase tracking-wider">{skill.name}</span>
               </div>
             ))}
           </div>

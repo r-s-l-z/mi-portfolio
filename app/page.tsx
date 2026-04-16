@@ -15,46 +15,46 @@ export default function Home() {
           <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
         </div>
 
-        {/* HERO SECTION  */}
-{/* HERO SECTION */}
-<div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16 relative z-10 min-h-[80vh] pt-10">
-  
-  {/* Bloque de Texto: flex-grow para que ocupe el espacio necesario */}
-  <div className="flex-[1.2] text-center md:text-left space-y-6">
-    <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter leading-[1.1]">
-      Haciendo realidad ideas, <br />
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-500 to-blue-500">
-        con la arquitectura digital.
-      </span>
-    </h1>
-    <p className="text-gray-400 text-lg md:text-xl max-w-xl mx-auto md:mx-0 leading-relaxed">
-      Desarrolladora Web Junior especializada en Front-End y WordPress. Mi formación en moda me permite aportar una sensibilidad estética junto a una ejecución técnica estructurada, sin olvidar la importancia de la accesibilidad y el SEO en cada proyecto digital.
-    </p>
-    
-    <div className="flex flex-wrap gap-4 justify-center md:justify-start mt-8">
-      <a href="#proyectos" className="px-8 py-3 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition-all">
-        Ver Proyectos
-      </a>
-      <a href="https://wa.me/34638243614" className="px-8 py-3 border border-gray-700 bg-black text-white font-semibold rounded-full flex items-center gap-2 hover:bg-white/10 transition-all">
-        <FaWhatsapp className="text-green-500" size={18} /> ¿Hablamos?
-      </a>
-    </div>
-  </div>
+        {/* HERO SECTION  */}}
+      <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 relative z-10 pt-32 md:pt-40 pb-10">
+        
+        {/* Bloque de Texto: Reducimos un poco el tamaño base para que quepa en laptops */}
+        <div className="flex-[1.2] text-center md:text-left space-y-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter leading-tight">
+            Haciendo realidad ideas, <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-500 to-blue-500">
+              con la arquitectura digital.
+            </span>
+          </h1>
+          
+          <p className="text-gray-400 text-base md:text-lg max-w-xl mx-auto md:mx-0 leading-relaxed">
+            Desarrolladora Web Junior especializada en Front-End y WordPress. Mi formación en moda me permite aportar una sensibilidad estética junto a una ejecución técnica estructurada.
+          </p>
+          
+          <div className="flex flex-wrap gap-4 justify-center md:justify-start mt-6">
+            <a href="#proyectos" className="px-8 py-3 bg-white text-black font-bold rounded-full hover:scale-105 transition-all">
+              Ver Proyectos
+            </a>
+            <a href="https://wa.me/34638243614" className="px-8 py-3 border border-gray-700 bg-black text-white font-semibold rounded-full flex items-center gap-2 hover:bg-white/10 transition-all">
+              <FaWhatsapp className="text-green-500" size={18} /> ¿Hablamos?
+            </a>
+          </div>
+        </div>
 
-  {/* Bloque de Imagen: Controlamos que no se haga gigante ni se pegue */}
-  <div className="flex-1 flex justify-center md:justify-end w-full">
-    <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[500px]">
-      <Image 
-        src="/imgPortada.png" 
-        alt="Hero" 
-        fill 
-        className="object-contain" 
-        priority 
-      />
-    </div>
-  </div>
+        {/* Bloque de Imagen: Ajustamos el tamaño para que no empuje el texto hacia afuera */}
+        <div className="flex-1 flex justify-center md:justify-end">
+          <div className="relative w-[280px] h-[280px] md:w-[380px] md:h-[380px] lg:w-[450px] lg:h-[450px]">
+            <Image 
+              src="/imgPortada.png" 
+              alt="Hero Rosa López" 
+              fill 
+              className="object-contain" 
+              priority 
+            />
+          </div>
+        </div>
 
-</div>
+      </div>
 
         {/* SECCIÓN: SOBRE MÍ */}
         <section id="sobre-mi" className="max-w-7xl w-full py-24 relative z-10 border-t border-white/10 mt-20 scroll-mt-24">

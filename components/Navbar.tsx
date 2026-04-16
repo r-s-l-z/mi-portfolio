@@ -5,70 +5,43 @@ import { MdEmail } from 'react-icons/md';
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-2 md:top-5 w-full z-50 flex justify-center px-2">
-      <div className="w-full max-w-7xl flex items-center justify-between bg-black/40 backdrop-blur-xl border border-white/10 px-4 md:px-6 py-2 md:py-3 rounded-full shadow-2xl">
-        
-        {/* Izquierda: Foto y Nombre */}
-        <div className="flex items-center gap-2 md:gap-3">
-          <div className="relative w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden border border-indigo-500/50">
-            <Image 
-              src="/imgPerfil.jpg"         
-              alt="Rosa López" 
-              fill                           
-              className="object-cover"   
-              priority                 
-            />
-          </div>
-          <span className="font-bold text-sm md:text-lg tracking-tighter text-white hidden lg:block">
-            Rosa López 
-          </span>
-        </div>
-
-        {/* Centro: Navegación y Título */}
-        <div className="flex flex-col items-center">
-          {/* Título profesional - Oculto en móviles muy pequeños */}
-          <div className="hidden md:inline-flex items-center gap-2 px-3 py-0.5 mb-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-[10px] uppercase tracking-widest font-bold">
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-indigo-500"></span>
-            </span>
-            Front-end / WordPress
+    <nav className="fixed top-2 w-full z-50 flex justify-center px-4">
+      <div className="w-full max-w-7xl bg-black/60 backdrop-blur-xl border border-white/10 rounded-3xl p-3 md:rounded-full shadow-2xl">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-2 md:gap-0">
+          
+          {/* Fila Superior en móvil: Logo y Redes */}
+          <div className="flex items-center justify-between w-full md:w-auto px-2 md:px-0">
+            <div className="flex items-center gap-2">
+              <div className="relative w-8 h-8 rounded-full overflow-hidden border border-indigo-500/50">
+                <Image src="/imgPerfil.jpg" alt="Rosa López" fill className="object-cover" priority />
+              </div>
+              <span className="font-bold text-sm text-white">Rosa López</span>
+            </div>
+            
+            {/* Redes visibles siempre, pero más pequeñas en móvil */}
+            <div className="flex gap-3 text-gray-400">
+              <a href="https://linkedin.com/in/rosaloiz/" target="_blank"><FaLinkedin size={18} /></a>
+              <a href="https://github.com/r-s-l-z" target="_blank"><FaGithub size={18} /></a>
+              <a href="mailto:roseloiz@icloud.com"><MdEmail size={20} /></a>
+            </div>
           </div>
 
-          {/* Enlaces de navegación */}
-          <div className="flex gap-4 md:gap-6 text-[11px] md:text-sm font-medium text-gray-300">
-            <Link href="#inicio" className="hover:text-white transition-colors">Inicio</Link>
-            <Link href="#sobre-mi" className="hover:text-white transition-colors">Sobre Mi</Link>
-            <Link href="#proyectos" className="hover:text-white transition-colors">Proyectos</Link>
-            <Link href="#habilidades" className="hover:text-white transition-colors">Habilidades</Link>
-          </div>
-        </div>
+          {/* Separador visual solo en móvil */}
+          <div className="w-full h-[1px] bg-white/10 md:hidden my-1"></div>
 
-        {/* Derecha: Redes Sociales */}
-        <div className="flex items-center gap-2 md:gap-4">
-          <a 
-            href="https://linkedin.com/in/rosaloiz/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-all"
-          >
-            <FaLinkedin className="text-[20px] md:text-[24px]" />
-          </a>
-          <a 
-            href="https://github.com/r-s-l-z" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-all"
-          >
-            <FaGithub className="text-[20px] md:text-[24px]" />
-          </a>
-          <a 
-            href="mailto:roseloiz@icloud.com" 
-            className="text-gray-400 hover:text-white transition-all"
-            title="Enviar un correo"
-          >
-            <MdEmail className="text-[22px] md:text-[26px]" />
-          </a>
+          {/* Menú y Título Profesional */}
+          <div className="flex flex-col items-center w-full md:w-auto">
+            <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-[9px] md:text-[10px] uppercase font-bold mb-1">
+               Front-end / WordPress Developer Portfolio
+            </div>
+            <div className="flex gap-5 text-[10px] md:text-sm font-medium text-gray-300">
+              <Link href="#inicio" className="hover:text-white transition-colors">Inicio</Link>
+              <Link href="#sobre-mi" className="hover:text-white transition-colors">Sobre Mi</Link>
+              <Link href="#proyectos" className="hover:text-white transition-colors">Proyectos</Link>
+              <Link href="#habilidades" className="hover:text-white transition-colors">Habilidades</Link>
+            </div>
+          </div>
+
         </div>
       </div>
     </nav>

@@ -16,34 +16,12 @@ export default function Home() {
         </div>
 
         {/* HERO SECTION - Optimizado para móvil y escritorio */}
-        <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-center md:justify-between gap-10 relative z-10 pt-32 md:pt-48 pb-16 min-h-[90vh] md:min-h-screen">
-          
-          {/* Bloque de Texto: Se apila debajo de la imagen en móvil */}
-          <div className="flex-[1.2] text-center md:text-left space-y-6 order-2 md:order-1">
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter leading-[1.1]">
-              Haciendo realidad ideas, <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-500 to-blue-500">
-                con la arquitectura digital.
-              </span>
-            </h1>
-            
-            <p className="text-gray-400 text-base md:text-xl max-w-xl mx-auto md:mx-0 leading-relaxed px-2 md:px-0">
-              Desarrolladora Web Junior especializada en Front-End y WordPress. Mi formación en moda me permite aportar una sensibilidad estética junto a una ejecución técnica estructurada.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-8 px-4 md:px-0">
-              <a href="#proyectos" className="px-8 py-3 bg-white text-black font-bold rounded-full hover:scale-105 transition-all text-center">
-                Ver Proyectos
-              </a>
-              <a href="https://wa.me/34638243614" className="px-8 py-3 border border-gray-700 bg-black text-white font-semibold rounded-full flex items-center justify-center gap-2 hover:bg-white/10 transition-all text-center">
-                <FaWhatsapp className="text-green-500" size={18} /> ¿Hablamos?
-              </a>
-            </div>
-          </div>
 
-          {/* Bloque de Imagen: Aparece primero en móvil */}
-          <div className="flex-1 flex justify-center md:justify-end order-1 md:order-2">
-            <div className="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] md:w-[400px] md:h-[400px] lg:w-[480px] lg:h-[480px]">
+        <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-center md:justify-between gap-8 relative z-10 pt-44 md:pt-48 pb-10 min-h-screen">
+          
+          {/* Imagen: Ahora tiene un contenedor que no deja que se desparrame */}
+          <div className="flex-1 flex justify-center md:justify-end order-1 md:order-2 w-full">
+            <div className="relative w-[220px] h-[220px] sm:w-[300px] sm:h-[300px] md:w-[450px] md:h-[450px]">
               <Image 
                 src="/imgPortada.png" 
                 alt="Hero Rosa López" 
@@ -51,6 +29,29 @@ export default function Home() {
                 className="object-contain" 
                 priority 
               />
+            </div>
+          </div>
+
+          {/* Texto: Debajo de la imagen en móvil, con márgenes correctos */}
+          <div className="flex-[1.2] text-center md:text-left space-y-6 order-2 md:order-1 px-4 md:px-0">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight">
+              Haciendo realidad ideas, <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-500 to-blue-500">
+                con la arquitectura digital.
+              </span>
+            </h1>
+            
+            <p className="text-gray-400 text-sm md:text-lg max-w-xl mx-auto md:mx-0 leading-relaxed">
+              Desarrolladora Web Junior especializada en Front-End y WordPress. Mi formación en moda me permite aportar una sensibilidad estética junto a una ejecución técnica estructurada.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
+              <a href="#proyectos" className="px-8 py-3 bg-white text-black font-bold rounded-full hover:scale-105 transition-all text-center">
+                Ver Proyectos
+              </a>
+              <a href="https://wa.me/34638243614" className="px-8 py-3 border border-gray-700 bg-black text-white font-semibold rounded-full flex items-center justify-center gap-2 hover:bg-white/10 transition-all">
+                <FaWhatsapp className="text-green-500" size={18} /> ¿Hablamos?
+              </a>
             </div>
           </div>
         </div>

@@ -8,15 +8,15 @@ export default function Home() {
       <Navbar />
       <main className="relative flex min-h-screen flex-col items-center bg-black text-white px-6 overflow-hidden pt-24 pb-8">
         
-        {/* FONDO MESH GRADIENT (Se mantiene igual) */}
+        {/* FONDO MESH GRADIENT */}
         <div className="absolute inset-0 -z-0">
           <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-indigo-600/20 blur-[130px] rounded-full animate-pulse"></div>
           <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-purple-600/20 blur-[130px] rounded-full animate-pulse [animation-delay:2s]"></div>
           <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
         </div>
 
-        {/* HERO SECTION (Tu contenido actual) */}
-        <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-6 relative z-10 min-h-[70vh]">
+        {/* HERO SECTION  */}
+        <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-20 relative z-10 min-h-[70vh]">
           <div className="flex-1 text-center md:text-left space-y-4">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tighter leading-tight">
               Haciendo realidad ideas, <br />
@@ -38,7 +38,7 @@ export default function Home() {
           </div>
           <div className="flex-1 flex justify-center md:justify-end">
             <div className="relative w-[250px] h-[250px] md:w-[400px] md:h-[400px]">
-              <Image src="/imgPortada1.png" alt="Hero" fill className="object-contain" priority />
+              <Image src="/imgPortada.png" alt="Hero" fill className="object-contain" priority />
             </div>
           </div>
         </div>
